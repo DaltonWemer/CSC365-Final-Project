@@ -2,7 +2,6 @@ package edu.missouristate.config;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Properties;
 
 import javax.sql.DataSource;
 

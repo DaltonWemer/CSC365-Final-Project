@@ -15,7 +15,7 @@ public class HomeController {
 		return "<strong>Hello World!</strong>";
 	}
 	
-	@GetMapping("/home")
+	@GetMapping(value = {"/home", "/"})
 	public String getHome() {
 		return "home";
 	}
