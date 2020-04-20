@@ -1,30 +1,28 @@
 package edu.missouristate.controllers;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
 public class HomeController {
-
+	
 	@ResponseBody
-	@GetMapping("/string")
-	public String getString() {
-		return "<strong>Hello World!</strong>";
+	@GetMapping(value = {"/devicestring"})
+	public String getDeviceString(Model model) throws Exception {
+		return "Device ID goes here";
 	}
 	
-	@GetMapping(value = {"/home", "/"})
-	public String getHome() {
-		return "home";
+	@GetMapping("/device")
+	public String getDeviceTable(Model model, HttpServletRequest request, HttpSession session) {
+		return "deviceTable";
 	}
 	
-	// Handles posts to the server (usually forms)
-	// Could be AJAX calls as well
-	@PostMapping("/home")
-	public String postHome() {
-		return "home";
-	}
+	
 	
 }

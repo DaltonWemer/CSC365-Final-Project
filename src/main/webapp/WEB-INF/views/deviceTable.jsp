@@ -6,7 +6,7 @@
 	<div id="demo-main-div" class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1>Example Page</h1>
+				<h1>Device Table</h1>
 				<%@ include file="/WEB-INF/layouts/message.jsp" %>
 				${message}		
 				
