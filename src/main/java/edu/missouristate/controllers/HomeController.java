@@ -23,6 +23,11 @@ public class HomeController {
 		return "deviceTable";
 	}
 	
+	@GetMapping("/devicer")
+	public String getDevices(Model model, HttpServletRequest request, HttpSession session) {
+		return "deviceTable";
+	}
+	
 	
 	
 }

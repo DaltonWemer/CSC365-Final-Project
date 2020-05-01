@@ -27,7 +27,7 @@ public class SpringJDBCConfiguration {
     @Bean(name = "embedded", destroyMethod = "shutdown")
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-		EmbeddedDatabase db = builder.setType(EmbeddedDatabaseType.DERBY).addScript("examples.sql")
+		EmbeddedDatabase db = builder.setType(EmbeddedDatabaseType.DERBY).addScript("devices.sql")
 //				.addScript("someOtherFile.sql")
 				.build();
         return db;
